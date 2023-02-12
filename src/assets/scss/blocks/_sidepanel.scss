@@ -28,5 +28,15 @@
             
         }
         
+
+    }
+    &__link {
+        &:hover {
+           path {
+                     transition: all .4s;
+                    fill: #fff;
+            }
+        }
+       
     }
 }

@@ -32,9 +32,32 @@
         font-size: 14px;
         text-decoration: none;
         transition: all .3s;
+        position: relative; 
         &:hover {
-            color: #fff;
             text-decoration: none;
         }
+        &_underline {
+            &:after {
+                display: block;
+                transition: all .4s;
+                content: "";
+                left: 0; 
+                width: 0;
+                height: 1px; 
+                background-color:#fff; 
+                transition: all .4s ease-out; 
+               }
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                    
+                    &:after {
+                      width: 100%;
+                    }
+                  
+                  
+                }
+        }
+      
     }
 }
