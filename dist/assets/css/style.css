@@ -723,3 +723,15 @@ template {
     font-size: 12px;
     line-height: 18px;
 }
+
+.resume {
+    padding-top: 120px;
+}
+
+.resume__title {
+    text-align: center;
+}
+
+.resume__subtitle {
+    text-align: center;
+}
