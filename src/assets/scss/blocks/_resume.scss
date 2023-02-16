@@ -1,9 +1,102 @@
 .resume {
     padding-top: 120px;
     &__title {
+        position: relative;
         text-align: center;
+        @include before_circle;
+        &:before {
+            top:-5px;
+            left: 50%;
+            transform:  translateX(-50%);
+
+          
+        }
     }
     &__subtitle {
         text-align: center;
+    }
+    &__wrapper {
+        padding: 60px 65px 0 90px;
+        display: grid;
+        grid-template-columns: repeat(2,425px);
+        column-gap: 136px;
+        
+    }
+    &__column {
+        
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &:before {
+                position: absolute;
+                content: '';
+                height: 15px;
+                width: 15px;
+                background: $circle-color;
+                border-radius: 100%;
+                left:-7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    top: -16px;
+                    left: 0;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 42px;
+            left: 0;
+            top: 63px;
+            background: #000;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-body {
+            padding: 0 0 0 43px;
+            margin-top: 12px;
+        }
+        &-icon {
+            position: absolute;
+            left: 42px;
+            top:45px;
+            @include before_circle;
+            img {
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+        }
+        &-level {
+            margin-top: 3px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-body {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 }
