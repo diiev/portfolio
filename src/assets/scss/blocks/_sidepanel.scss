@@ -1,6 +1,6 @@
 .sidepanel {
     color: #fff;
-    position: fixed;
+    position: absolute;
     display: flex;
     height: 340px;
     flex-direction: column;
@@ -27,8 +27,6 @@
            
             
         }
-        
-
     }
     &__link {
         &:hover {
