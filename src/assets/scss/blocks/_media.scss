@@ -8,6 +8,7 @@
         max-width: 960px;
      }
      .about {
+        padding-top: 60px;
         &__wrapper {
             grid-template-columns: 400px 520px;
             column-gap: 40px;
@@ -22,14 +23,16 @@
             column-gap: 15px;
         }
      }
-    .resume {
+    .resume { 
+        padding-top: 60px;
         &__wrapper {
             padding: 60px 60px 0 60px;
             grid-template-columns: repeat(2,400px);
             column-gap: 50px;
         }
         }
-     .skills {
+     .skills { 
+        padding-top: 60px;
         &__items {
             justify-content: center;
             grid-template-columns: repeat(3,270px);
@@ -37,7 +40,31 @@
         &__ratings {
             grid-template-columns: repeat(2,auto);
         }
-     }
+     } 
+     .works { 
+        padding-top: 60px;
+        &__wrapper {
+            grid-template: repeat(2,280px)/repeat(auto-fit,280px);
+            grid-auto-rows: 280px;
+            gap: 20px;
+            justify-content: center;
+
+        }
+        .horizontal, .vertical {
+            grid-column: unset;
+            grid-row: unset;
+            }    
+        
+       
+    } 
+    .contacts { 
+        padding-top: 60px;
+        &__wrapper {
+            column-gap: 20px;
+            grid-template: auto /repeat(2,auto);
+            justify-content: center;
+        }
+    }
     }
      
 
@@ -88,6 +115,39 @@
             grid-template-columns: repeat(1,auto);
             }
          }
+         .contacts {
+            &__title {
+                text-align: center;
+                &:before {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            &__subtitle {
+                text-align: center;
+            }
+            &__text {
+                text-align: center;
+            }
+            &__social {
+                text-align: center;
+                margin: 20px auto 0 auto;
+            }
+            &__wrapper {
+                grid-template-columns: auto;
+            }
+            &__photo {
+                display: none;
+            }
+            .divider {
+                margin: 0 auto;
+            }
+            &__form {
+                
+                grid-template: 45px 45px 190px /repeat(1,auto);
+            }
+        }
+   
 }
 
 @media (max-width:768px) {
@@ -134,7 +194,14 @@
             row-gap: 20px;
             justify-content: center;
             }     
+    } 
+   .contacts {
+    &__triggers {
+        grid-template-columns: 300px;
+        row-gap: 20px;
+        justify-content: center;
     }
+   }
 }
 
 @media (max-width:576px) {
@@ -180,5 +247,13 @@
             grid-template-columns: 40px auto;
         }
         }
-     
+        .contacts {
+            &__triggers {
+                grid-template-columns: auto;
+               
+            }
+            &__input {
+                grid-column:  1 / 3;
+            }
+           }
 }
